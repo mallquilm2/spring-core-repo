@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 ">
     
-    <bean id="holaMundo" class="com.cibertec.capitulo1.beans.HolaMundo" />
+    <bean id="holaMundo" class="com.cibertec.capitulo1.beans.HolaMundo" scope="prototype"/>
     
     <bean id="impresoraServiceBean" class="com.cibertec.capitulo1.service.ImpresoraService">
         <constructor-arg ref="documentoTexto"/>
@@ -15,6 +15,8 @@
         <property name="documento" ref="documentoTexto" />
     </bean>
         -->
-    <bean id="documentoExcel" class="com.cibertec.capitulo1.beans.DocumentoExcel"/>
+    <bean id="documentoExcel" class="com.cibertec.capitulo1.beans.DocumentoExcel"
+    init-method="iniciar" destroy-method="destruir"/>
+    
     <bean id="documentoTexto" class="com.cibertec.capitulo1.beans.DocumentoTexto"/>
 </beans>
