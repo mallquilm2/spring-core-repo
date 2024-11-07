@@ -12,7 +12,15 @@ import com.cibertec.capitulo1.beans.Imprimible;
  */
 public class ImpresoraService {
     
+    public ImpresoraService(){}
+
+    public ImpresoraService(Imprimible documento) {
+        this.documento = documento;
+    }
+    
     private Imprimible documento;
+    
+    
     
     public void imprimirDocumento(){
         System.out.println(documento.imprimir());

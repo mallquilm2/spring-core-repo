@@ -8,8 +8,13 @@
     <bean id="holaMundo" class="com.cibertec.capitulo1.beans.HolaMundo" />
     
     <bean id="impresoraServiceBean" class="com.cibertec.capitulo1.service.ImpresoraService">
-        <property name="documento" ref="documentoExcel" />
+        <constructor-arg ref="documentoTexto"/>
     </bean>
+    <!--
+    <bean id="impresoraServiceBean" class="com.cibertec.capitulo1.service.ImpresoraService">
+        <property name="documento" ref="documentoTexto" />
+    </bean>
+        -->
     <bean id="documentoExcel" class="com.cibertec.capitulo1.beans.DocumentoExcel"/>
-
+    <bean id="documentoTexto" class="com.cibertec.capitulo1.beans.DocumentoTexto"/>
 </beans>
