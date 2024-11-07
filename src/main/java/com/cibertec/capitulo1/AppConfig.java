@@ -4,7 +4,10 @@
  */
 package com.cibertec.capitulo1;
 
+import com.cibertec.capitulo1.beans.DocumentoExcel;
+import com.cibertec.capitulo1.beans.DocumentoTexto;
 import com.cibertec.capitulo1.beans.HolaMundo;
+import com.cibertec.capitulo1.service.ImpresoraService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,6 +17,21 @@ public class AppConfig {
     @Bean
     public HolaMundo HolaMundoBean(){
         return new HolaMundo();
+    }
+   
+    @Bean
+    public DocumentoExcel documentoExcel(){
+        return new DocumentoExcel();
+    }
+    
+    @Bean
+    public DocumentoTexto documentoTexto(){
+        return new DocumentoTexto();
+    }
+    
+    @Bean
+    public ImpresoraService impresoraService(){
+        return new ImpresoraService();
     }
     
 }
