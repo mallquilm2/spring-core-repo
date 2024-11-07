@@ -6,5 +6,10 @@
 ">
     
     <bean id="holaMundo" class="com.cibertec.capitulo1.beans.HolaMundo" />
+    
+    <bean id="impresoraServiceBean" class="com.cibertec.capitulo1.service.ImpresoraService">
+        <property name="documento" ref="documentoExcel" />
+    </bean>
+    <bean id="documentoExcel" class="com.cibertec.capitulo1.beans.DocumentoExcel"/>
 
 </beans>
