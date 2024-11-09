@@ -7,8 +7,9 @@ package com.cibertec.capitulo1.service;
 import com.cibertec.capitulo1.beans.Imprimible;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class ImpresoraService {
     
     @Autowired

@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-">
-    
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd"
+       default-init-method="iniciar" default-destroy-method="destruir">
+ <context:component-scan base-package="com.cibertec.capitulo1"/>
+ <!--      
     <bean id="holaMundo" class="com.cibertec.capitulo1.beans.HolaMundo" scope="prototype"/>
     
     <bean id="impresoraServiceBean" class="com.cibertec.capitulo1.service.ImpresoraService">
         <constructor-arg ref="documentoTexto"/>
     </bean>
-    <!--
-    <bean id="impresoraServiceBean" class="com.cibertec.capitulo1.service.ImpresoraService">
-        <property name="documento" ref="documentoTexto" />
-    </bean>
-        -->
-    <bean id="documentoExcel" class="com.cibertec.capitulo1.beans.DocumentoExcel"
-    init-method="iniciar" destroy-method="destruir"/>
+    <bean id="documentoExcel" class="com.cibertec.capitulo1.beans.DocumentoExcel" lazy-init="true"/>
     
-    <bean id="documentoTexto" class="com.cibertec.capitulo1.beans.DocumentoTexto"/>
+    <bean id="documentoTexto" class="com.cibertec.capitulo1.beans.DocumentoTexto" lazy-init="true" />
+        -->
 </beans>

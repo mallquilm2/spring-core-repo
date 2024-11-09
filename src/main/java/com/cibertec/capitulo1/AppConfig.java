@@ -9,27 +9,29 @@ import com.cibertec.capitulo1.beans.DocumentoTexto;
 import com.cibertec.capitulo1.beans.HolaMundo;
 import com.cibertec.capitulo1.service.ImpresoraService;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan(basePackages = {"com.cibertec.capitulo1"})
 public class AppConfig {
     
-    @Bean
+    //@Bean
     public HolaMundo HolaMundoBean(){
         return new HolaMundo();
     }
    
-    @Bean
+    //@Bean
     public DocumentoExcel documentoExcel(){
         return new DocumentoExcel();
     }
     
-    @Bean
+    //@Bean
     public DocumentoTexto documentoTexto(){
         return new DocumentoTexto();
     }
     
-    @Bean
+    //@Bean
     public ImpresoraService impresoraService(){
         return new ImpresoraService();
     }

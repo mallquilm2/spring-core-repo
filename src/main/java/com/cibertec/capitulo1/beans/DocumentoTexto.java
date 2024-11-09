@@ -4,12 +4,19 @@
  */
 package com.cibertec.capitulo1.beans;
 
-/**
- *
- * @author Adminfoco
- */
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class DocumentoTexto implements Imprimible{
 
+    public void iniciar(){
+        System.out.println("Iniciando la construccion del bean de TEXTO");
+    }
+    
+    public void destruir(){
+        System.out.println("Destruyendo el bean de TEXTO");
+    }
+    
     @Override
     public String imprimir() {
         return "Imprimiendo desde un archivo de texto.";

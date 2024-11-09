@@ -5,11 +5,9 @@
 package com.cibertec.capitulo1.beans;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-/**
- *
- * @author Adminfoco
- */
+@Component("holaMundoBean")
 public class HolaMundo {
     
     @Value("Almunos desde anotaciones")

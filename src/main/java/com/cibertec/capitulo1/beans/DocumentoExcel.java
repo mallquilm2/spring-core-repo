@@ -4,10 +4,9 @@
  */
 package com.cibertec.capitulo1.beans;
 
-/**
- *
- * @author Adminfoco
- */
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class DocumentoExcel implements Imprimible{
     
     public void iniciar(){
