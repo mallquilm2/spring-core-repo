@@ -11,7 +11,9 @@ import com.cibertec.capitulo1.service.ImpresoraService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
+@EnableAspectJAutoProxy
 @Configuration
 @ComponentScan(basePackages = {"com.cibertec.capitulo1"})
 public class AppConfig {
